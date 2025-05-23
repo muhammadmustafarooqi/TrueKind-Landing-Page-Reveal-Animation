@@ -1,0 +1,333 @@
+      @import url("https://fonts.cdnfonts.com/css/pp-neue-montreal");
+      @import url("https://fonts.cdnfonts.com/css/pp-editorial-old");
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "PP Neue Montreal", sans-serif;
+        background-color: #000;
+        color: #fff;
+        overflow-x: hidden;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      h1 {
+        text-align: center;
+        color: #fff;
+        font-size: 5rem;
+        font-weight: 500;
+        line-height: 1;
+      }
+
+      h1 span {
+        font-family: "PP Editorial Old", "PP Neue Montreal";
+        font-weight: 500;
+        font-style: italic;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      a,
+      p {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #fff;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      /* Loader animation */
+      .loader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100svh;
+        z-index: 1000;
+      }
+
+      .overlay {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+      }
+
+      .block {
+        width: 100%;
+        height: 100%;
+        background-color: #303030;
+      }
+
+      /* Main container */
+      .container {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      /* Background image */
+      .hero-img {
+        position: absolute;
+        top: 0;
+        left: 0; 
+        width: 100vw;
+        height: 100vh; 
+        overflow: hidden;
+        z-index: -1;
+      }
+
+      .hero-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+         object-position: center;
+      }
+
+      /* Navbar styling */
+      .nav {
+        position: absolute;
+        top: 0;
+        width: 100vw;
+        padding: 1.25em 1.5em;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 100;
+      }
+
+      .logo a {
+        text-transform: capitalize;
+        font-size: 14px;
+        font-weight: bolder;
+        cursor: pointer;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 1.5em;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
+
+      .btn {
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      .btn a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+        width: 60px;
+        height: 40px;
+        color: #000;
+        background-color: #fff;
+        border-radius: 40px;
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
+
+      .btn a:hover {
+        background-color: #ccc;
+      }
+
+      /* Header content */
+      .header {
+        width: 100%;
+        height: 100%;
+        padding-top: 25svh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5em;
+        text-align: center;
+      }
+
+      /* Call to action button */
+      .cta {
+        position: absolute;
+        left: 50%;
+        bottom: 3em;
+        transform: translateX(-50%);
+        width: 50%;
+        height: 60px;
+        padding: 0.5rem;
+        display: flex;
+        justify-content: flex-end;
+        background-color: #fff;
+        border-radius: 5rem;
+        will-change: transform;
+      }
+
+      .cta-lable {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .cta-lable p {
+        color: #000;
+      }
+
+      .cta-icon {
+        position: relative;
+        height: 100%;
+        aspect-ratio: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        background: #303030;
+        border-radius: 60px;
+        will-change: transform;
+      }
+
+      /* Intro logo animation */
+      .intro-logo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        gap: 0.25rem;
+      }
+
+      #word-1 {
+        position: relative;
+        left: -0.5rem;
+        padding-right: 0.25rem;
+      }
+
+      .word-1 {
+        font-size: 2.5rem;
+      }
+      .divider {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%);
+        transform-origin: center top;
+        width: 1px;
+        height: 100%;
+        background-color: #fff;
+      }
+      .spinner-container {
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .spinner {
+        width: 50px;
+        height: 50px;
+        border: 1.4px solid #fff;
+        border-top-color: rgba(255, 255, 255, 0.125);
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      .counter {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+      }
+      .count {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+      }
+      .digit {
+        flex: 1;
+        padding-top: 1rem;
+      }
+      .count .digit h1 {
+        font-family: "PP Editorial Old", "PP Neue Montreal";
+        font-size: 15rem;
+        font-weight: 400;
+      }
+      .nav {
+        position: absolute;
+        width: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .cta-icon {
+        transform: scale(0);
+      }
+      .line,
+      .cta-lable,
+      .word,
+      .count .digit {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      }
+      .line h1,
+      .line p,
+      .cta-lable p,
+      .count .digit h1 {
+        position: relative;
+        transform: translateY(120%);
+        will-change: transform;
+      }
+      .logo a,
+      .nav-links a {
+        position: relative;
+        transform: translateY(120%);
+        will-change: transform;
+        opacity: 0;
+      }
+      #word-1 h1 {
+        transform: translateY(-120%);
+      }
+      #word-2 h1 {
+        transform: translateY(120%);
+      }
+      .block {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+      }
+      .divider {
+        transform: scaleY(0);
+      }
+      .hero-img {
+        transform: scale(1.5);
+        will-change: transform;
+      }
+      .cta {
+        transform: translateX(-50%) scale(0.8);
+      }
+
+      @media (max-width: 900px) {
+        h1 {
+          font-size: 2.5rem;
+        }
+        .nav-links {
+          display: none;
+        }
+        .cta {
+          width: 90%;
+        }
+      }
+  
